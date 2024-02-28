@@ -22,3 +22,110 @@
 .next:hover {
     color: var(--primary-clr)
 }
+
+.day,
+.today-active,
+.today-active-event,
+.prev-date,
+.next-date,
+.event {
+    width: 14.28%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--primary-clr);
+    border: 1px solid #f5f5f5;
+}
+
+.day:not(.prev-date , .next-date):hover{
+    color: #fff;
+    background-color: var(--primary-clr);
+}
+.event:not(.prev-date , .next-date):hover{
+    color: #fff;
+    background-color: var(--primary-clr);
+}
+
+.prev-date,
+.next-date{
+    color: #b3b3b3;
+}
+
+.today-active,
+.today-active-event {
+    position: relative;
+    font-size: 2rem;
+    color: #fff;
+    background-color: var(--primary-clr);
+}
+
+.today-active::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 8px 2px var(--primary-clr);
+}
+
+.today-active-event::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 8px 2px var(--primary-clr);
+}
+
+
+
+.event, .today-active-event {
+    position: relative;
+}
+
+.event::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 50px;
+    height: 6px;
+    border-radius: 30px;
+    transform: translate(-50%);
+    background-color: var(--primary-clr);
+}
+
+.today-active-event::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 50px;
+    height: 6px;
+    border-radius: 30px;
+    transform: translate(-50%);
+    background-color: #f5f5f5;
+    bottom: 20%;
+}
+
+.event:hover::after{
+    background-color: #fff
+}
+
+.today-active-event {
+    padding-bottom: 10px;
+}
+
+.gotobtn:hover {
+    color: #fff;
+    background-color: var(--primary-clr);
+}
+
+.todaybtn:hover {
+    color: #fff;
+    background-color: var(--primary-clr);
+}
