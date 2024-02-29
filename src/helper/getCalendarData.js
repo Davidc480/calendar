@@ -1,6 +1,6 @@
-const datosCalendar = () => {
-  const fechaActual = new Date();
-  const mesActual = fechaActual.getMonth();
+const getCalendarData = () => {
+  const currentDate = new Date();
+  const month = currentDate.getMonth();
 
   const weekdaysArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -42,7 +42,7 @@ const datosCalendar = () => {
     { class: "next-date", day: "3" },
   ];
 
-  const monthYear = [
+  const monthYearArray = [
     "Enero",
     "Febrero",
     "Marzo",
@@ -72,8 +72,9 @@ const datosCalendar = () => {
   return {
     weekdays: weekdaysArray,
     days: daysArray,
-    monthActual: monthYear[mesActual],
+    monthYear: monthYearArray,
+    currentMonth: monthYearArray[month],
   };
 };
 
-export default datosCalendar;
+export default getCalendarData;
